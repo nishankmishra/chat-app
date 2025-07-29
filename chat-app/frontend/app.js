@@ -9,7 +9,7 @@ function enterChat() {
   document.getElementById("login-screen").style.display = "none";
   document.getElementById("chat-container").style.display = "block";
 
-  socket = new WebSocket("ws://localhost:8080");
+  socket = new WebSocket("https://chat-app-pp39.onrender.com/");
 
   socket.onmessage = function(event) {
     const msg = JSON.parse(event.data);
