@@ -1,6 +1,10 @@
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: process.env.PORT || 8080 },() => {
-  console.log('WebSocket server is running on ws://localhost:8080');
+
+const PORT = process.env.PORT || 8080;
+const wss = new WebSocket.Server({ port: PORT });
+
+wss.on('listening', () => {
+  console.log(`WebSocket server is running on ws://localhost:${PORT}`);
 });
 
 const rooms = {};
