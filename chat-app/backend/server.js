@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: process.env.port || 8080 },() => {
+const wss = new WebSocket.Server({ port: process.env.PORT || 8080 },() => {
   console.log('WebSocket server is running on ws://localhost:8080');
 });
 
